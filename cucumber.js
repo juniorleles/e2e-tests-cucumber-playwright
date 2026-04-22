@@ -12,6 +12,7 @@ module.exports = {
       'html:reports/cucumber-report.html',
     ],
     formatOptions: { snippetInterface: 'async-await' },
+    timeout: 60000,
     publishQuiet: true,
   },
   checkout: {
@@ -27,6 +28,7 @@ module.exports = {
       'html:reports/checkout-report.html',
     ],
     formatOptions: { snippetInterface: 'async-await' },
+    timeout: 60000,
     publishQuiet: true,
   },
   login: {
@@ -42,6 +44,7 @@ module.exports = {
       'html:reports/login-report.html',
     ],
     formatOptions: { snippetInterface: 'async-await' },
+    timeout: 60000,
     publishQuiet: true,
   },
 };

@@ -3,19 +3,23 @@
  * Responsável por inicializar e encerrar o browser.
  */
 
-const { Before, After, AfterStep, Status } = require('@cucumber/cucumber');
+const { Before, After, AfterStep, Status, setDefaultTimeout } = require('@cucumber/cucumber');
 const path = require('path');
-const fs = require('fs');
+const fs   = require('fs');
+
+// ── Timeout global ─────────────────────────────────
+// O padrão do Cucumber é 5000ms — insuficiente para
+// chromium.launch() + navegação em redes lentas.
+setDefaultTimeout(60 * 1000); // 60 segundos
 
 // ── Antes de cada cenário ──────────────────────────
-Before(async function (scenario) {
+Before({ timeout: 60 * 1000 }, async function (scenario) {
   await this.init();
-
   console.log(`\n▶ Iniciando: ${scenario.pickle.name}`);
 });
 
 // ── Após cada step — captura screenshot em falha ──
-AfterStep(async function ({ result, pickleStep }) {
+AfterStep({ timeout: 15 * 1000 }, async function ({ result, pickleStep }) {
   if (result.status === Status.FAILED) {
     try {
       const screenshotDir = path.join('reports', 'screenshots');
@@ -26,15 +30,14 @@ AfterStep(async function ({ result, pickleStep }) {
       const safeName = pickleStep.text
         .replace(/[^a-zA-Z0-9]/g, '_')
         .substring(0, 50);
-      const filename = `${Date.now()}_${safeName}.png`;
-      const filepath = path.join(screenshotDir, filename);
+      const filename  = `${Date.now()}_${safeName}.png`;
+      const filepath  = path.join(screenshotDir, filename);
 
       const screenshot = await this.page.screenshot({
         path: filepath,
         fullPage: true,
       });
 
-      // Anexar screenshot ao relatório do Cucumber
       await this.attach(screenshot, 'image/png');
       console.log(`  📸 Screenshot salvo: ${filepath}`);
     } catch (err) {
@@ -44,7 +47,7 @@ AfterStep(async function ({ result, pickleStep }) {
 });
 
 // ── Após cada cenário ──────────────────────────────
-After(async function (scenario) {
+After({ timeout: 30 * 1000 }, async function (scenario) {
   const status = scenario.result.status;
   const icon   = status === Status.PASSED ? '✅' : '❌';
 
