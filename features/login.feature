@@ -28,7 +28,7 @@ Funcionalidade: Autenticação de Usuário
     E preencho a senha com "SuperSecretPassword!"
     E clico no botão de login
     Então devo estar na URL "/secure"
-    E o título da página deve conter "Secure Area"
+    E o heading da página deve conter "Secure Area"
 
   @positivo
   Cenário: Logout após login bem-sucedido

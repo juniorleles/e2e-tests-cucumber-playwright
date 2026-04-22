@@ -1,6 +1,6 @@
 /**
  * Step Definitions — Login
- * Implementa cada passo definido no arquivo .feature.
+ * Implementa cada passo definido no arquivo login.feature.
  * Usa os Page Objects via this (CustomWorld).
  */
 
@@ -12,7 +12,6 @@ const { expect } = require('@playwright/test');
 Given('que estou na página de login', async function () {
   await this.loginPage.navigate();
 
-  // Validar que a página carregou corretamente
   const title = await this.loginPage.getPageTitle();
   expect(title).toContain('The Internet');
 });
@@ -65,9 +64,11 @@ Then('devo estar na URL {string}', async function (urlPath) {
   expect(currentUrl).toContain(urlPath);
 });
 
-Then('o título da página deve conter {string}', async function (expectedTitle) {
-  const title = await this.securePage.getPageTitle();
-  expect(title).toContain(expectedTitle);
+Then('o heading da página deve conter {string}', async function (expectedTitle) {
+  // O <title> do site é sempre "The Internet" em todas as páginas.
+  // A distinção é feita pelo heading <h2> que contém "Secure Area".
+  const heading = await this.securePage.getHeadingText();
+  expect(heading).toContain(expectedTitle);
 });
 
 Then('devo ser redirecionado para a página de login', async function () {
@@ -83,7 +84,6 @@ Then('devo ver a mensagem {string}', async function (expectedMessage) {
 // ── THEN — Fluxos Negativos ────────────────────────────────────────────────
 
 Then('devo ver a mensagem de erro {string}', async function (expectedError) {
-  // Aguardar a mensagem de erro aparecer
   const isErrorVisible = await this.loginPage.isErrorMessageVisible();
   expect(isErrorVisible).toBe(true);
 
