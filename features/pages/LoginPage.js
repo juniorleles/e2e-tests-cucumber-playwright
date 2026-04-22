@@ -8,19 +8,18 @@ class LoginPage {
     this.page = page;
 
     // ── Seletores ──────────────────────────────────────
-    this.usernameInput   = '#username';
-    this.passwordInput   = '#password';
-    this.loginButton     = 'button[type="submit"]';
-    this.flashMessage    = '#flash';
-    this.flashError      = '#flash.error';
-    this.flashSuccess    = '#flash.success';
-    this.logoutButton    = 'a[href="/logout"]';
-    this.pageHeading     = 'h2';
-    this.subHeading      = 'h4';
+    this.usernameInput = '#username';
+    this.passwordInput = '#password';
+    this.loginButton   = 'button[type="submit"]';
+    this.flashMessage  = '#flash';
+    this.flashError    = '#flash.error';
+    this.flashSuccess  = '#flash.success';
+    this.logoutButton  = 'a[href="/logout"]';
+    this.pageHeading   = 'h2';
 
-    // ── URLs ───────────────────────────────────────────
-    this.loginUrl  = '/login';
-    this.secureUrl = '/secure';
+    // ── URLs absolutas (evita depender de baseURL no contexto) ──
+    this.loginUrl  = 'https://the-internet.herokuapp.com/login';
+    this.secureUrl = 'https://the-internet.herokuapp.com/secure';
   }
 
   // ── Navegação ──────────────────────────────────────
@@ -73,7 +72,6 @@ class LoginPage {
   async getFlashMessage() {
     await this.page.waitForSelector(this.flashMessage, { timeout: 5000 });
     const text = await this.page.textContent(this.flashMessage);
-    // Remove o caractere × do botão de fechar a mensagem
     return text.replace('×', '').trim();
   }
 
@@ -105,10 +103,6 @@ class LoginPage {
   async isOnSecurePage() {
     const url = await this.getCurrentUrl();
     return url.includes('/secure');
-  }
-
-  async waitForUrl(urlPart) {
-    await this.page.waitForURL(`**${urlPart}`, { timeout: 10000 });
   }
 }
 

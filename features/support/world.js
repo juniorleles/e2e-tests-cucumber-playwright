@@ -46,10 +46,14 @@ class CustomWorld extends World {
     const headless = process.env.HEADLESS !== 'false';
 
     this.browser = await chromium.launch({ headless });
+
+    // baseURL permite URLs relativas como '/login' e '/secure'
     this.context = await this.browser.newContext({
+      baseURL: this.baseUrl,
       viewport: { width: 1280, height: 720 },
       locale: 'pt-BR',
     });
+
     this.page = await this.context.newPage();
 
     // Tarefa 1
