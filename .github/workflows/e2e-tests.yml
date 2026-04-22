@@ -1,0 +1,49 @@
+name: E2E Tests — Cucumber + Playwright
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  e2e:
+    name: Run E2E Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Instalar Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Rodar testes E2E
+        run: npm run test:report
+        env:
+          HEADLESS: true
+
+      - name: Gerar relatório HTML
+        if: always()
+        run: node scripts/generate-report.js
+        continue-on-error: true
+
+      - name: Upload relatório como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report
+          path: |
+            reports/cucumber-report.html
+            reports/html-report/
+            reports/screenshots/
+          retention-days: 30
