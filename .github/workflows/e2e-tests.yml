@@ -10,7 +10,7 @@ jobs:
   e2e:
     name: Run E2E Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout código
@@ -27,23 +27,32 @@ jobs:
       - name: Instalar Playwright browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Rodar testes E2E
-        run: npm run test:report
+      - name: Rodar Tarefa 1 — Login (The Internet)
+        run: npm run test:login
         env:
           HEADLESS: true
-
-      - name: Gerar relatório HTML
-        if: always()
-        run: node scripts/generate-report.js
         continue-on-error: true
 
-      - name: Upload relatório como artifact
+      - name: Rodar Tarefa 2 — Checkout (SauceDemo)
+        run: npm run test:checkout
+        env:
+          HEADLESS: true
+        continue-on-error: true
+
+      - name: Gerar relatório HTML unificado
+        if: always()
+        run: npm run report:html
+        continue-on-error: true
+
+      - name: Upload relatório completo
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: e2e-report
+          name: e2e-report-completo
           path: |
             reports/cucumber-report.html
+            reports/login-report.html
+            reports/checkout-report.html
             reports/html-report/
             reports/screenshots/
           retention-days: 30

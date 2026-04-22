@@ -1,38 +1,42 @@
 /**
- * Gera relatório HTML a partir do JSON do Cucumber.
- * Executar após: npm run test:report
+ * Gera relatório HTML unificado de todos os testes E2E.
  */
-
 const report = require('multiple-cucumber-html-reporter');
-const path = require('path');
+const path   = require('path');
+const fs     = require('fs');
+
+// Coletar todos os JSONs de relatório disponíveis
+const reportsDir = path.join('reports');
+const jsonFiles  = fs.readdirSync(reportsDir)
+  .filter(f => f.endsWith('.json'))
+  .map(f => path.join(reportsDir, f));
+
+if (jsonFiles.length === 0) {
+  console.log('Nenhum relatório JSON encontrado. Rode os testes primeiro.');
+  process.exit(0);
+}
 
 report.generate({
-  jsonDir: path.join('reports'),
-  reportPath: path.join('reports', 'html-report'),
+  jsonDir:    reportsDir,
+  reportPath: path.join(reportsDir, 'html-report'),
   metadata: {
-    browser: {
-      name: 'chromium',
-      version: 'latest',
-    },
-    device: 'Local Machine',
-    platform: {
-      name: process.platform,
-      version: process.version,
-    },
+    browser:  { name: 'chromium', version: 'latest' },
+    device:   'CI / Local Machine',
+    platform: { name: process.platform, version: process.version },
   },
   customData: {
     title: 'Relatório de Testes E2E',
     data: [
-      { label: 'Projeto', value: 'E2E Tests — Cucumber + Playwright' },
-      { label: 'Aplicação', value: 'The Internet Herokuapp' },
-      { label: 'URL', value: 'https://the-internet.herokuapp.com' },
-      { label: 'Execução', value: new Date().toLocaleString('pt-BR') },
+      { label: 'Projeto',    value: 'E2E Tests — Cucumber + Playwright' },
+      { label: 'Tarefa 1',   value: 'Login — The Internet Herokuapp' },
+      { label: 'Tarefa 2',   value: 'Checkout — SauceDemo' },
+      { label: 'Execução',   value: new Date().toLocaleString('pt-BR') },
     ],
   },
-  pageTitle: 'Relatório E2E — Login',
-  reportName: 'Testes E2E com Cucumber + Playwright',
+  pageTitle:   'Relatório E2E Completo',
+  reportName:  'E2E — Login + Checkout',
   displayDuration: true,
-  durationInMS: true,
+  durationInMS:    true,
 });
 
 console.log('✅ Relatório HTML gerado em: reports/html-report/index.html');

@@ -1,13 +1,14 @@
 {
   "name": "e2e-tests-cucumber-playwright",
   "version": "1.0.0",
-  "description": "Testes E2E com Cucumber + Playwright - The Internet Herokuapp",
+  "description": "Testes E2E com Cucumber + Playwright — Login e Checkout",
   "scripts": {
     "test": "cucumber-js",
-    "test:report": "cucumber-js --format @cucumber/pretty-formatter --format json:reports/cucumber-report.json",
+    "test:login": "cucumber-js --profile login",
+    "test:checkout": "cucumber-js --profile checkout",
     "test:positivo": "cucumber-js --tags @positivo",
     "test:negativo": "cucumber-js --tags @negativo",
-    "test:login": "cucumber-js --tags @login",
+    "test:smoke": "cucumber-js --tags @smoke",
     "test:headed": "HEADLESS=false cucumber-js",
     "report:html": "node scripts/generate-report.js"
   },
