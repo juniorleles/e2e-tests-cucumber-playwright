@@ -1,0 +1,1885 @@
+[
+  {
+    "description": "  Como um cliente do e-commerce\n  Quero adicionar produtos ao carrinho e finalizar a compra\n  Para receber meus produtos com sucesso",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;compra-completa-com-um-produto-e-dados-válidos",
+        "keyword": "Cenário",
+        "line": 17,
+        "name": "Compra completa com um produto e dados válidos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 874492499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2511578898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 18,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61352198
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 19,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60101800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 20,
+            "name": "o carrinho deve conter 1 produto",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5488699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 21,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78176800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 22,
+            "name": "preencho os dados de entrega com nome \"João\" sobrenome \"Silva\" e CEP \"01310-100\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125906200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 23,
+            "name": "confirmo os dados do pedido",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 853698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 24,
+            "name": "devo ver o resumo do pedido com o produto \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10734898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 25,
+            "name": "finalizo a compra",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109416400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 26,
+            "name": "devo ver a mensagem de confirmação \"Thank you for your order!\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:139"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16340300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 347462199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@positivo",
+            "line": 16
+          },
+          {
+            "name": "@smoke",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;compra-com-múltiplos-produtos",
+        "keyword": "Cenário",
+        "line": 29,
+        "name": "Compra com múltiplos produtos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 816475100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2545911300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 30,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63090799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 31,
+            "name": "adiciono o produto \"Sauce Labs Bike Light\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191662700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 32,
+            "name": "adiciono o produto \"Sauce Labs Bolt T-Shirt\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61996899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 33,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65760598
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 34,
+            "name": "o carrinho deve conter 3 produtos",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4257800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78439900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 36,
+            "name": "preencho os dados de entrega com nome \"Maria\" sobrenome \"Oliveira\" e CEP \"04538-133\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145919598
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "confirmo os dados do pedido",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 38,
+            "name": "o valor total do pedido deve ser maior que 0",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5362399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 39,
+            "name": "finalizo a compra",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61976599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 40,
+            "name": "devo ver a mensagem de confirmação \"Thank you for your order!\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:139"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15179398
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 352433299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@positivo",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;remover-produto-do-carrinho-antes-do-checkout",
+        "keyword": "Cenário",
+        "line": 43,
+        "name": "Remover produto do carrinho antes do checkout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 847660799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2507348900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 44,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63359699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 45,
+            "name": "adiciono o produto \"Sauce Labs Bike Light\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48989700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 46,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64348400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 47,
+            "name": "o carrinho deve conter 2 produtos",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4413698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 48,
+            "name": "removo o produto \"Sauce Labs Backpack\" do carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58602700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 49,
+            "name": "o carrinho deve conter 1 produto",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4383799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 50,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52961199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 51,
+            "name": "preencho os dados de entrega com nome \"Carlos\" sobrenome \"Santos\" e CEP \"20040-020\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124977800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 52,
+            "name": "confirmo os dados do pedido",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 598298
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 53,
+            "name": "finalizo a compra",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69647399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 54,
+            "name": "devo ver a mensagem de confirmação \"Thank you for your order!\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:139"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16898199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 341174600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@positivo",
+            "line": 42
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;continuar-comprando-após-adicionar-ao-carrinho",
+        "keyword": "Cenário",
+        "line": 57,
+        "name": "Continuar comprando após adicionar ao carrinho",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 746755900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2557566399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 58,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60503498
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 59,
+            "name": "o badge do carrinho deve exibir \"1\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10608699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 60,
+            "name": "adiciono o produto \"Sauce Labs Fleece Jacket\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52410098
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 61,
+            "name": "o badge do carrinho deve exibir \"2\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7887799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 62,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89114599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 63,
+            "name": "o carrinho deve conter 2 produtos",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5413598
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 324568400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@positivo",
+            "line": 56
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;tentar-finalizar-checkout-com-formulário-em-branco",
+        "keyword": "Cenário",
+        "line": 70,
+        "name": "Tentar finalizar checkout com formulário em branco",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 933822399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2520923399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 71,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66434599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 72,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63171099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 73,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72757199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 74,
+            "name": "clico em continuar sem preencher os dados",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56273200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 75,
+            "name": "devo ver o erro de campo obrigatório \"First Name is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18827799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 331422699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 69
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;tentar-finalizar-checkout-sem-sobrenome",
+        "keyword": "Cenário",
+        "line": 78,
+        "name": "Tentar finalizar checkout sem sobrenome",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1293143800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2268524199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 79,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56695799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 80,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61028098
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 81,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72569399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 82,
+            "name": "preencho apenas o primeiro nome com \"João\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15607398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 83,
+            "name": "clico em continuar sem preencher os dados restantes",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61150898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 84,
+            "name": "devo ver o erro de campo obrigatório \"Last Name is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17394198
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 360593099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 77
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;tentar-finalizar-checkout-sem-cep",
+        "keyword": "Cenário",
+        "line": 87,
+        "name": "Tentar finalizar checkout sem CEP",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1080030900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2349670700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 88,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54287000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 89,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60888698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 90,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76725400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 91,
+            "name": "preencho o nome \"João\" e sobrenome \"Silva\" sem CEP",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35895399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 92,
+            "name": "clico em continuar sem preencher os dados restantes",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50047298
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 93,
+            "name": "devo ver o erro de campo obrigatório \"Postal Code is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15805798
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 441544600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 86
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;cancelar-checkout-e-retornar-ao-carrinho",
+        "keyword": "Cenário",
+        "line": 96,
+        "name": "Cancelar checkout e retornar ao carrinho",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 898254600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2523420498
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 97,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59337199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 98,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62632398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 99,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79048199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 100,
+            "name": "cancelo o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41108500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 101,
+            "name": "devo retornar à página do carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:157"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 750999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 335641100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 95
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;cancelar-na-página-de-revisão-do-pedido",
+        "keyword": "Cenário",
+        "line": 104,
+        "name": "Cancelar na página de revisão do pedido",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 879172400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2519975199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 105,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71891800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 106,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60284798
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 107,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71128500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 108,
+            "name": "preencho os dados de entrega com nome \"João\" sobrenome \"Silva\" e CEP \"01310-100\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117582698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 109,
+            "name": "confirmo os dados do pedido",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 587798
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 110,
+            "name": "cancelo o pedido na revisão",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65729399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 111,
+            "name": "devo retornar à página de produtos",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 562098
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 331696600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 103
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;tentar-checkout-com-carrinho-vazio",
+        "keyword": "Cenário",
+        "line": 114,
+        "name": "Tentar checkout com carrinho vazio",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 835647100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2485185099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 115,
+            "name": "acesso o carrinho diretamente",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157555399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 116,
+            "name": "o carrinho deve estar vazio",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26383599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 117,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 499088498
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 118,
+            "name": "preencho os dados de entrega com nome \"João\" sobrenome \"Silva\" e CEP \"01310-100\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139343799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 119,
+            "name": "confirmo os dados do pedido",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 519399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 120,
+            "name": "o resumo do pedido não deve conter produtos",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:132"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3481298
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 294317100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 113
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;validação-de-campos-obrigatórios-com-múltiplas-combinações",
+        "keyword": "Esquema do Cenário",
+        "line": 133,
+        "name": "Validação de campos obrigatórios com múltiplas combinações",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 958568200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2565447698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 124,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58487199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 125,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63297499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 126,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70386698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 127,
+            "name": "preencho o formulário com firstName \"\" lastName \"Silva\" postalCode \"01310-100\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43650599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 128,
+            "name": "clico em continuar sem preencher os dados restantes",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62938899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 129,
+            "name": "devo ver o erro de campo obrigatório \"First Name is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16426799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 281945099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 122
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;validação-de-campos-obrigatórios-com-múltiplas-combinações",
+        "keyword": "Esquema do Cenário",
+        "line": 134,
+        "name": "Validação de campos obrigatórios com múltiplas combinações",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 863107799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2528547698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 124,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63963999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 125,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63108999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 126,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69095599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 127,
+            "name": "preencho o formulário com firstName \"João\" lastName \"\" postalCode \"01310-100\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47082799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 128,
+            "name": "clico em continuar sem preencher os dados restantes",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62945900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 129,
+            "name": "devo ver o erro de campo obrigatório \"Last Name is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17598800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 295856200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 122
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout-de-produtos-—-saucedemo;validação-de-campos-obrigatórios-com-múltiplas-combinações",
+        "keyword": "Esquema do Cenário",
+        "line": 135,
+        "name": "Validação de campos obrigatórios com múltiplas combinações",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 893932099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 10,
+            "name": "que estou logado no SauceDemo como \"standard_user\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2469629698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 124,
+            "name": "adiciono o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76676800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 125,
+            "name": "acesso o carrinho",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60341599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 126,
+            "name": "prossigo para o checkout",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66054199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 127,
+            "name": "preencho o formulário com firstName \"João\" lastName \"Silva\" postalCode \"\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40747898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 128,
+            "name": "clico em continuar sem preencher os dados restantes",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49957399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 129,
+            "name": "devo ver o erro de campo obrigatório \"Postal Code is required\"",
+            "match": {
+              "location": "features\\step_definitions\\checkout.steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16256700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 289645200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkout",
+            "line": 3
+          },
+          {
+            "name": "@saucedemo",
+            "line": 3
+          },
+          {
+            "name": "@negativo",
+            "line": 122
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "checkout-de-produtos-—-saucedemo",
+    "line": 4,
+    "keyword": "Funcionalidade",
+    "name": "Checkout de Produtos — SauceDemo",
+    "tags": [
+      {
+        "name": "@checkout",
+        "line": 3
+      },
+      {
+        "name": "@saucedemo",
+        "line": 3
+      }
+    ],
+    "uri": "features\\checkout.feature"
+  }
+]
